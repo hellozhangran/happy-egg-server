@@ -1,0 +1,22 @@
+{
+  "name": "happy-egg-server",
+  "version": "1.0.0",
+  "description": "Node server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellozhangran/happy-egg-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hellozhangran/happy-egg-server/issues"
+  },
+  "homepage": "https://github.com/hellozhangran/happy-egg-server#readme",
+  "dependencies": {
+    "protocol-buffers": "^4.1.0"
+  }
+}
