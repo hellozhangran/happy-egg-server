@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
-    "dev": "nodemon --exec ts-node express-ts/app.ts"
+    "dev-ts": "nodemon --exec ts-node express-ts/app.ts",
+    "dev": "nodemon express/app.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "@types/express": "^4.17.2",
     "@types/node": "^12.11.7",
     "express": "^4.17.1",
+    "http-errors": "^1.7.3",
     "protocol-buffers": "^4.1.0",
     "typescript": "^3.7.2"
   },

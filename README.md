@@ -1,18 +1,15 @@
 # happy-egg-server
 Node server
 
-Line
+## TODO
 
-RPC通信
-
-Ajax
-    http
-        html
-        json
-            key:value
-
-
+Node Server RESTful API
+Mongodb
+node-crawler爬虫
+Node调试
+OAuth
+SSR
 RPC
-    二进制
+JWT
+Redis缓存
 
-test

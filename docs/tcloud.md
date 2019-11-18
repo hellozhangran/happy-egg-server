@@ -15,7 +15,6 @@
 * 下载node： `wget https://nodejs.org/dist/v12.13.0/node-v12.13.0-linux-x64.tar.xz`
 
 
-
 ## 技巧篇
 * 如何保持ssh服务连接不断开？
 使用ssh命令时，可以增加ServerAliveInterval参数设置心跳时间，比如设置60秒发送一次心跳包：`ssh -o ServerAliveInterval=60 root@xx.xx.xx.xx`
