@@ -8,8 +8,9 @@ var app = express();
 
 app.use('/api', apiRouter);
 app.use(function(req, res, next) {
-    // next(createError(404, 'asdf'));
-    res.send('URL Error');
+    // res.status(404);
+    // res.send('页面找不到了');
+    return next(createError(404, '页面找不到了'));
 });
 
 
