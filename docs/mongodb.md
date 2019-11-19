@@ -6,7 +6,7 @@ brew查看是否已安装，前提是当初通过brew安装的
 > brew list
 
 启动数据库：（后面的地址是通过brew安装时的默认文件地址）
-> `mongod mongod --config /usr/local/etc/mongod.conf`
+> `mongod --config /usr/local/etc/mongod.conf`
 
 阿斯蒂芬
 
