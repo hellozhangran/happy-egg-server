@@ -38,3 +38,18 @@ show collections
 db.user.insert({name: '', age:30, sale: true})
 db.user.find()
 db.user.find().pretty()
+
+
+## 常见问题
+
+`brew update` 报错：
+fatal: unable to access 'https://github.com/Homebrew/homebrew-core/': LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54
+Error: Fetching /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core failed!
+解决：https://github.com/Homebrew/homebrew-core/issues/30917
+
+`brew update` 继续报错，这次的大概意思是找不到mongodb，查了一下才发现，竟然！是因为mongodb不开源了，详细见：https://segmentfault.com/a/1190000020400235，更多mongodb取消开源的八卦：https://www.infoq.cn/article/1_WCE7EZkCSBbbYMbUra
+
+正确的安装方式：https://www.runoob.com/mongodb/mongodb-osx-install.html
+
+
+
