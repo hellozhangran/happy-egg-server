@@ -40,6 +40,9 @@ db.user.find()
 db.user.find().pretty()
 
 
+## mongoose
+文档： http://www.mongoosejs.net/docs/index.html
+
 ## 常见问题
 
 `brew update` 报错：
