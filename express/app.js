@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path');
 var createError = require('http-errors');
+const mongoose = require('mongoose');
 
 var apiRouter = require('./routes/index');
 
@@ -14,7 +15,25 @@ app.use(function(req, res, next) {
 });
 
 
-app.listen('3000', () => {
-    console.log('listen: 3000');
-});
-module.exports = app;
+function listen () {
+    app.listen('3000', () => {
+        console.log('listen: 3000');
+    });
+}
+
+function connect() {
+    mongoose.connection
+        .on('error', function (err) {
+            console.log('connect error: ', err);
+        })
+        .on('disconnected', run)
+        .once('open', listen);
+
+    return mongoose.connect('mongodb://localhost/test', {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    });
+}
+
+
+connect();
