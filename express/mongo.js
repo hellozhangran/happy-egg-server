@@ -12,19 +12,23 @@ db.on('error', function (err) {
 
 db.once('open', function () {
     console.log('open mongodb success!');
-    // var yun = new User({name: '赵凤云', age: 27, sale: false});
-    // yun.save(function (err) {
+    // User.create({name: '赵凤云', age: 27, sale: false}, function(err, info) {
     //     if (err) {
-    //         console.log('save error');
+    //         console.log('创建失败');
+    //     } else {
+    //         console.log('创建成功');
     //     }
-    //     console.log('save success');
+    // });
+    // User.find(function(err, info) {
+    //     if (err) {
+    //         console.log('find err');
+    //         return;
+    //     }
+    //     console.log(info);
     // })
-    User.find(function(err, info) {
-        if (err) {
-            console.log('find err');
-            return;
-        }
-        console.log(info);
+    User.find({}).then(res => {
+        console.log('adsfsdaf');
+        console.log(res);
     })
 });
 

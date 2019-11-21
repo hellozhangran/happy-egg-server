@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var createError = require('http-errors');
 const mongoose = require('mongoose');
-
+Promise = require('bluebird')
 var apiRouter = require('./routes/index');
 
 var app = express();
