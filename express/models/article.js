@@ -10,8 +10,20 @@ const ArticleSchema = mongoose.Schema({
 });
 
 // 方法
-ArticleSchema.method({
-});
+ArticleSchema.methods = {
+    list (date) {
+        this.find({
+            'create_date': date
+        })
+        .exec()
+        .then(list => {
+            if (list) {
+                return list;
+            }
+            return Promise.reject('error');
+        });
+    }
+};
 
 const Article = mongoose.model('article', ArticleSchema);
 module.exports = Article;
