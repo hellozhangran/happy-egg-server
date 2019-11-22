@@ -1,19 +1,16 @@
-var express = require('express');
-var router = express.Router();
-const jsond = {
-    name: 'zhangran',
-    age: 21
-}
+const express = require('express');
+const router = express.Router();
+const articleCtrl = require('../controller/article');
+
 
 router.get('/', (req, res, next) => {
     res.json(jsond);
 });
 
-router.get('/list', (req, res, next) => {
+router.get('/articles', articleCtrl.list);
+router.get('/articles/first', articleCtrl.one);
+router.get('/articles/')
 
-    res.send('api: list');
-
-})
 
 
 module.exports = router;
