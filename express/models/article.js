@@ -13,7 +13,7 @@ const ArticleSchema = mongoose.Schema({
 ArticleSchema.methods = {
     list (date) {
         this.find({
-            'create_date': date
+            'create_date': new RegExp(date, i)
         })
         .exec()
         .then(list => {

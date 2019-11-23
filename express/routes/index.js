@@ -4,13 +4,10 @@ const articleCtrl = require('../controller/article');
 
 
 router.get('/', (req, res, next) => {
-    res.json(jsond);
+    res.json('hello world');
 });
 
 router.get('/articles', articleCtrl.list);
-router.get('/articles/first', articleCtrl.one);
-router.get('/articles/')
-
 
 
 module.exports = router;
