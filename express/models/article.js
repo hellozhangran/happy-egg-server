@@ -25,5 +25,6 @@ ArticleSchema.methods = {
     }
 };
 
+
 const Article = mongoose.model('article', ArticleSchema);
 module.exports = Article;
