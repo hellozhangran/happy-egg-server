@@ -23,3 +23,7 @@ Node.js大概从2014年开始火热，现在搜一下学习教程，很多开源
 * JWT
 * Redis缓存
 
+## 进度Changelog
+
+记录每天更新的内容 [CHANGELOG](https://github.com/hellozhangran/happy-egg-server/blob/master/TODO.md)
+
