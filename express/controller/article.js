@@ -1,13 +1,14 @@
 const Article = require('../models/article');
 function list (req, res, next) {
     // 默认取当天的所有信息
-    var today = Date.now()
-    Article.list()
+    var date = Date.now()
     var date = new Date();
     var todayStr = String(date.getFullYear()) + String(date.getMonth()) + String(date.getDate());
-    Article.list(todayStr).then(res => {
-        console.log(res);
-        res.json(res);
+    Article.list(todayStr).then(data => {
+        console.log(data);
+        res.json(data);
+    }).catch(err => {
+        console.log('err: ', err);
     });
 }
 

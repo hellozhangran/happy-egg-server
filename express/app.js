@@ -24,7 +24,7 @@ function connect() {
         .on('error', function (err) {
             console.log('connect error: ', err);
         })
-        .on('disconnected', run)
+        .on('disconnected', connect)
         .once('open', listen);
 
     return mongoose.connect('mongodb://localhost/test', {

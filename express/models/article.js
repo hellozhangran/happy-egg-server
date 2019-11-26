@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const ArticleSchema = mongoose.Schema({
-    create_date: {type: Date, default: Date.now},
+    create_date: String,
     from: String,
     title: String,
     article: String,
@@ -9,22 +9,39 @@ const ArticleSchema = mongoose.Schema({
     comment: {type: Number, default: 0},
 });
 
-// 方法
-ArticleSchema.methods = {
-    list (date) {
-        this.find({
-            'create_date': new RegExp(date, i)
-        })
-        .exec()
-        .then(list => {
-            if (list) {
-                return list;
-            }
-            return Promise.reject('error');
-        });
-    }
-};
+// 静态方法
+ArticleSchema.statics.list = function (date) {
+    return this.find({
+        'create_date': date
+    })
+    .exec()
+    .then(list => {
+        if (list) {
+            return list;
+        }
+        return Promise.reject('error');
+    });
+}
 
+// 静态方法
+ArticleSchema.statics.list = function (date) {
+    return this.find({
+        'create_date': new RegExp(date, 'i')
+    })
+    .exec()
+    .then(list => {
+        if (list) {
+            return list;
+        }
+        return Promise.reject('error');
+    });
+}
 
-const Article = mongoose.model('article', ArticleSchema);
+// 实例方法
+ArticleSchema.methods.getM = function () {
+    return 'this is getM';
+}
+
+// 第三参数指定mongodb中collection的名字，如果不传则默认为变为复数（即articles）
+const Article = mongoose.model('Article', ArticleSchema, 'article');
 module.exports = Article;
