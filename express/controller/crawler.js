@@ -1,22 +1,27 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+const articleCtrl = require('./article');
 
-async function cnblogs () {
+async function cnblogs (request, response) {
     const res = await axios.get('https://www.cnblogs.com/');
-    const html = res.data;
-    console.log(html);
-    // .then(res => {
-    //     var html = res.data;
-    //     const $ = cheerio.load(html);
-    //     const $href = $('#editor_pick_lnk');
-    //     let name = $href.text();
-    //     let href = $href.attr('href');
-    //     return { name, href };
-    // })
-    // .then(res => {
-    //     axios.get(res.href)
-    //     .then
-    // })
+    const $ = cheerio.load(res.data);
+    const $href = $('#editor_pick_lnk');
+    let name = $href.text();
+    let href = $href.attr('href');
+    
+    const subRes = await axios.get(href);
+    const $$ = cheerio.load(subRes.data);
+    const bodyStr = $$('#cnblogs_post_body').html();
+    console.log(bodyStr)
+    const cRes = await articleCtrl.create({
+        from: 'cnblogs',
+        title: name,
+        article: bodyStr,
+        hot_level: 1,
+        favor: 1,
+        comment: 1
+    });
+    response.json(cRes);
 };
 
-cnblogs();
+module.exports = cnblogs;

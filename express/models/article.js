@@ -23,20 +23,6 @@ ArticleSchema.statics.list = function (date) {
     });
 }
 
-// 静态方法
-ArticleSchema.statics.list = function (date) {
-    return this.find({
-        'create_date': new RegExp(date, 'i')
-    })
-    .exec()
-    .then(list => {
-        if (list) {
-            return list;
-        }
-        return Promise.reject('error');
-    });
-}
-
 // 实例方法
 ArticleSchema.methods.getM = function () {
     return 'this is getM';
