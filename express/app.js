@@ -2,6 +2,8 @@ var express = require('express');
 var createError = require('http-errors');
 const mongoose = require('mongoose');
 var apiRouter = require('./routes/index');
+const runSchedule = require('./schedule');
+const crawlerCtrl = require('./controller/crawler');
 
 var app = express();
 
@@ -16,6 +18,10 @@ app.use(function(req, res, next) {
 function listen () {
     app.listen('3000', () => {
         console.log('listen: 3000');
+        // 开启自动脚本
+        runSchedule(function() {
+            crawlerCtrl.cnblogs();
+        })
     });
 }
 
@@ -32,6 +38,5 @@ function connect() {
         useUnifiedTopology: true
     });
 }
-
 
 connect();

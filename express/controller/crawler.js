@@ -2,7 +2,8 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const articleCtrl = require('./article');
 
-async function cnblogs (request, response) {
+
+async function cnblogs () {
     const res = await axios.get('https://www.cnblogs.com/');
     const $ = cheerio.load(res.data);
     const $href = $('#editor_pick_lnk');
@@ -21,7 +22,8 @@ async function cnblogs (request, response) {
         favor: 1,
         comment: 1
     });
-    response.json(cRes);
 };
 
-module.exports = cnblogs;
+module.exports = {
+    cnblogs
+};
