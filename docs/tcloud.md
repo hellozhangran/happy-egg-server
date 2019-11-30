@@ -77,6 +77,7 @@
 ## 安装pm2
 * 安装：`npm install pm2@latest -g`
 * 启动node：`pm2 start express/app.js`
+* 重启：`pm2 restart express/app.js`
 
 
 ## 技巧篇
