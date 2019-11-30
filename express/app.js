@@ -11,7 +11,8 @@ app.use('/api', apiRouter);
 app.use(function(req, res, next) {
     // res.status(404);
     // res.send('页面找不到了');
-    return next(createError(404, '页面找不到了'));
+    // return next(createError(404, '页面找不到了'));
+    res.json('server is ok!');
 });
 
 
