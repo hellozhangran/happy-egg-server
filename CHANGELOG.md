@@ -1,6 +1,8 @@
 ## 2019.11.30
-commit添加emoji：
+* commit添加emoji：
 https://github.com/Byron4j/CookBook/blob/master/Git/gitCookbook/1-Git%E6%8F%90%E4%BA%A4%E6%B7%BB%E5%8A%A0emoji%E5%9B%BE%E6%A0%87.md
+
+* 把项目部署到腾讯云
 
 ## 2019.11.29
 no line

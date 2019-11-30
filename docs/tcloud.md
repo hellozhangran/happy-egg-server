@@ -79,8 +79,13 @@
 * 启动node：`pm2 start express/app.js`
 * 重启：`pm2 restart express/app.js`
 
+## 试一下你的服务
+* 在本地启动node后通过localhost:3000访问，而在腾讯云启动后就要通过腾讯云的ip:3000访问了
+* 后面可以通过配置nginx把3000端口号抹去，不过现在可以通过蹩脚的方式拿到自己腾讯云服务器上的接口了。
+
+
 
 ## 技巧篇
 * 如何保持ssh服务连接不断开？
-使用ssh命令时，可以增加ServerAliveInterval参数设置心跳时间，比如设置60秒发送一次心跳包：`ssh -o ServerAliveInterval=60 root@49.233.152.8`
+使用ssh命令时，可以增加ServerAliveInterval参数设置心跳时间，比如设置60秒发送一次心跳包：`ssh -o ServerAliveInterval=60 root@xx.xx.xx.xx`
 详见：https://ngwind.github.io/2019/01/25/%E4%BF%9D%E6%8C%81ssh%E6%9C%8D%E5%8A%A1%E8%BF%9E%E6%8E%A5%E4%B8%8D%E6%96%AD%E5%BC%80%E7%9A%84%E6%96%B9%E6%B3%95/
