@@ -20,7 +20,7 @@ var schedule = require('node-schedule');
 // });
 
 function runSchedule (cb) {
-    schedule.scheduleJob({hour: 11, minute: 15}, cb);
+    schedule.scheduleJob({hour: 7}, cb);
 }
 
 module.exports = runSchedule;
