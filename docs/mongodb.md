@@ -50,7 +50,7 @@ fatal: unable to access 'https://github.com/Homebrew/homebrew-core/': LibreSSL S
 Error: Fetching /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core failed!
 解决：https://github.com/Homebrew/homebrew-core/issues/30917
 
-`brew update` 继续报错，这次的大概意思是找不到mongodb，查了一下才发现，竟然！是因为mongodb不开源了，详细见：https://segmentfault.com/a/1190000020400235，更多mongodb取消开源的八卦：https://www.infoq.cn/article/1_WCE7EZkCSBbbYMbUra
+`brew update` 继续报错，这次的大概意思是找不到mongodb，查了一下才发现，竟然！是因为mongodb不开源了，详细见：https://segmentfault.com/a/1190000020400235，更多mongodb取消开源的八卦：
 
 正确的安装方式：https://www.runoob.com/mongodb/mongodb-osx-install.html
 
