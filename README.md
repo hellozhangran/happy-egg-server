@@ -18,11 +18,11 @@ Node.js大概从2014年开始火热，现在搜一下学习教程，很多开源
 ## 目录
 *目前项目进度已经可以涵盖前5篇的内容了，文档部分可能会延后*
 
-1. 本地搭建一个简易开发环境
+1. [本地搭建一个简易开发环境](https://github.com/hellozhangran/happy-egg-server/blob/master/docs/1.dev-local.md)
 2. 使用express实现RESTful API
 3. mongodb以及mongoose的使用
 4. 实现一个简易爬虫&启动定时任务
-5. [部署项目到腾讯云服务器](https://github.com/hellozhangran/happy-egg-server/blob/master/docs/tcloud.md)
+5. [部署项目到腾讯云服务器](https://github.com/hellozhangran/happy-egg-server/blob/master/docs/4.tcloud.md)
 
 
 ## 可能涉及内容
