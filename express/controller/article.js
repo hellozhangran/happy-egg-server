@@ -1,4 +1,5 @@
 const Article = require('../models/article');
+const getTodayStr = require('../utils/date').getTodayStr;
 function list (req, res, next) {
     // 默认取当天的所有信息
     var date = Date.now()
@@ -14,8 +15,7 @@ function list (req, res, next) {
 
 function create (params) {
     var standardParams = params;
-    var date = new Date();
-    var todayStr = String(date.getFullYear()) + String(date.getMonth()) + String(date.getDate());
+    var todayStr = getTodayStr();
     standardParams.create_date = params.create_date ? params.create_date : todayStr;
     console.log('create: ', params);
     return Article.create({

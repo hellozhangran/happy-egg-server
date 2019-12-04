@@ -3,10 +3,10 @@ const ArticleSchema = mongoose.Schema({
     create_date: String,
     from: String,
     title: String,
-    article: String,
     hot_level: {type: Number, default: 0},
     favor: {type: Number, default: 0},
     comment: {type: Number, default: 0},
+    article: String
 });
 
 // 静态方法
