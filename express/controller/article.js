@@ -2,9 +2,7 @@ const Article = require('../models/article');
 const getTodayStr = require('../utils/date').getTodayStr;
 function list (req, res, next) {
     // 默认取当天的所有信息
-    var date = Date.now()
-    var date = new Date();
-    var todayStr = String(date.getFullYear()) + String(date.getMonth()) + String(date.getDate());
+    var todayStr = getTodayStr();
     Article.list(todayStr).then(data => {
         console.log(data);
         res.json(data);
