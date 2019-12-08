@@ -22,7 +22,7 @@
         "max_restarts": 30,
         "autorestart": true,
         "cron_restart": "",
-        "restart_delay": "60s",
+        "restart_delay": 60,
         "env": {
            "NODE_ENV": "production"
         },
