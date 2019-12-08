@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
     "dev-ts": "nodemon --exec ts-node express-ts/app.ts",
-    "dev": "nodemon express/app.js"
+    "dev": "nodemon express/app.js",
+    "pm2": "pm2 start pm2.json"
   },
   "repository": {
     "type": "git",

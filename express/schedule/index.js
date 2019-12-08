@@ -20,7 +20,8 @@ var schedule = require('node-schedule');
 // });
 
 function runSchedule (cb) {
-    schedule.scheduleJob({hour: 10, minute: 24}, cb);
+    // 坑，如果只设置hour:7，上午7点时的每分钟都会执行。
+    schedule.scheduleJob({hour: 7, minute: 0}, cb);
 }
 
 module.exports = runSchedule;
