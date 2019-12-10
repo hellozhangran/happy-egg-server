@@ -1,7 +1,7 @@
 {
     "apps": {
         "name": "happy-pm2",
-        "script": "./express/app.js",
+        "script": "./demos/app.js",
         "cwd": "./",
         "args": "",
         "interpreter": "",
@@ -12,7 +12,7 @@
             "logs"
         ],
         "exec_mode": "cluster_mode",
-        "instances": 1,
+        "instances": 4,
         "max_memory_restart": 8,
         "error_file": "./logs/app-err.log",
         "out_file": "./logs/app-out.log",
