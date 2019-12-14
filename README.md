@@ -30,7 +30,9 @@ Node.js大概从2014年开始火热，现在搜一下学习教程，很多开源
 * Node Server RESTful API
 * Mongodb
 * Mongoose的增删改查
+* Mongodb的负载均衡
 * 爬虫/定时任务
+* 静态服务器
 * Node调试
 * OAuth
 * SSR

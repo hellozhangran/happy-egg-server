@@ -1,12 +1,11 @@
 const express = require('express');
 const cluster = require('cluster');
 const app = express();
-app.use(function (req, res, next) {
-    // let is = cluster.isMaster;
-    let works = cluster.workers
-    // res.send(111);
-    // console.log(works.toString());
-    console.log(works);
-    res.json(JSON.stringify(works));
-})
-app.listen(3000);
+var cluster = require('cluster');
+app.use('/api', (req, res, next) => {
+    console.log('hello api', cluster.isMaster);
+    res.json('hello i am api');
+});
+app.listen('3000', () => {
+    console.log('listen: 3000');
+});
