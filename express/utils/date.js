@@ -1,3 +1,9 @@
+function s2 (str) {
+    str = String(str);
+    str = str.length === 1 ? '0' + str : str;
+    return str;
+}
+
 function getTodayStr () {
     const date = new Date();
     // 周、月是从0开始，日从1开始
@@ -8,6 +14,13 @@ function getTodayStr () {
     return `${date.getFullYear()}${month}${dateStr}`;
 }
 
+// 当前的时分秒
+function getHMS () {
+    const date = new Date();
+    return `${s2(date.getHours())}:${s2(date.getMinutes())}:${s2(date.getSeconds())}`;
+}
+
 module.exports = {
-    getTodayStr
+    getTodayStr,
+    getHMS,
 };

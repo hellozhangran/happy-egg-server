@@ -1,18 +1,18 @@
 const fs = require('fs');
 const path = require('path');
 const getTodayStr = require('../express/utils/date').getTodayStr;
+const getHMS = require('../express/utils/date').getHMS;
 let filePath = path.resolve('../', 'crawler.log');
 let log = fs.readFileSync(filePath, 'utf8');
 
 // 得到第一行
-let first = log.split('\n')[0];
-let date = first.split(' ')[0];
+let list = log.split('\n');
+let date = list[0].split(' ')[0];
 let currentDay = getTodayStr();
-fs.appendFileSync(filePath, '2019-02-09');
-// if (date === currentDay) {
-//     // 写入 false
-    
-// } else {
-//     // 写入 true
-
-// }
+console.log(list);
+if (date === currentDay) {
+    list.unshift(currentDay + ' ' + getHMS() + ' ' + 'false');
+} else {
+    list.unshift(currentDay + ' ' + getHMS() + ' ' + 'true');
+}
+fs.writeFileSync(filePath, list.join('\n'), 'utf8');
