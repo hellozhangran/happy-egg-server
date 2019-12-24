@@ -1,4 +1,5 @@
 var schedule = require('node-schedule');
+var limit = require('./limit.js');
 
 // 可以按照cron的格式设置
 // var j = schedule.scheduleJob('* * * * *', function(){
@@ -21,7 +22,13 @@ var schedule = require('node-schedule');
 
 function runSchedule (cb) {
     // 坑，如果只设置hour:7，上午7点时的每分钟都会执行。
-    schedule.scheduleJob({hour: 7, minute: 0}, cb);
+    schedule.scheduleJob({hour: 7, minute: 0}, function () {
+        limit(function () {
+            cb();
+        })
+    });
 }
 
 module.exports = runSchedule;
+
+limit();
