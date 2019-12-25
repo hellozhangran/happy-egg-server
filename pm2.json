@@ -1,7 +1,7 @@
 {
     "apps": {
         "name": "happy-pm2",
-        "script": "./demos/app.js",
+        "script": "./express/app.js",
         "cwd": "./",
         "args": "",
         "interpreter": "",

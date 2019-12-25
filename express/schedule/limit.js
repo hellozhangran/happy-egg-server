@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const getTodayStr = require('../utils/date').getTodayStr;
 const getHMS = require('../utils/date').getHMS;
-let filePath = path.resolve('../../', 'crawler.log');
+let filePath = path.resolve('../../', 'logs/crawler.log');
 let log = fs.readFileSync(filePath, 'utf8');
 
 function limit(cb) {

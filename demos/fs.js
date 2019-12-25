@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const getTodayStr = require('../express/utils/date').getTodayStr;
 const getHMS = require('../express/utils/date').getHMS;
-let filePath = path.resolve('../', 'crawler.log');
+let filePath = path.resolve('../', 'logs/crawler.log');
 let log = fs.readFileSync(filePath, 'utf8');
 
 // 得到第一行
