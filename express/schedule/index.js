@@ -16,7 +16,7 @@ var limit = require('./limit.js');
  *  year
  *  dayOfWeek (0-6) Starting with Sunday
  */
-// var j = schedule.scheduleJob({second: null}, function(){
+// var j = schedule.scheduleJob({second: null}, function() {
 //     console.log('Time for tea!');
 // });
 

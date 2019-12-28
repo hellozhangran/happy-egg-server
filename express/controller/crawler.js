@@ -13,7 +13,6 @@ async function cnblogs () {
     const subRes = await axios.get(href);
     const $$ = cheerio.load(subRes.data);
     const bodyStr = $$('#cnblogs_post_body').html();
-    console.log(bodyStr)
     const cRes = await articleCtrl.create({
         from: 'cnblogs',
         title: name,

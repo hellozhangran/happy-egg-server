@@ -6,9 +6,8 @@ const path = require('path');
 const getTodayStr = require('../utils/date').getTodayStr;
 const getHMS = require('../utils/date').getHMS;
 let filePath = path.join(__dirname, '../../logs/crawler.log');
-let log = fs.readFileSync(filePath, 'utf8');
-
 function limit(cb) {
+    let log = fs.readFileSync(filePath, 'utf8');
     // 得到第一行
     let list = log.split('\n');
     let date = list[0].split(' ')[0];
