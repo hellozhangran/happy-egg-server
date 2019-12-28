@@ -30,5 +30,3 @@ function runSchedule (cb) {
 }
 
 module.exports = runSchedule;
-
-limit();

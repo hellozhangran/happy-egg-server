@@ -80,4 +80,3 @@ db.once('open', function () {
         console.log(res);
     });
 });
-
