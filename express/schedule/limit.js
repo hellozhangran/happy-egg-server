@@ -6,7 +6,7 @@ const path = require('path');
 const getTodayStr = require('../utils/date').getTodayStr;
 const getHMS = require('../utils/date').getHMS;
 let filePath = path.join(__dirname, '../../logs/crawler.log');
-function limit(cb) {
+function limit_old(cb) {
     let log = fs.readFileSync(filePath, 'utf8');
     // 得到第一行
     let list = log.split('\n');
@@ -19,6 +19,11 @@ function limit(cb) {
     } else {
         list.unshift(currentDay + ' ' + hms + ' ' + 'true');
         fs.writeFileSync(filePath, list.join('\n'), 'utf8');
+        cb && cb();
+    }
+}
+function limit (cb) {
+    if (process.env.NODE_APP_INSTANCE === 0) {
         cb && cb();
     }
 }
