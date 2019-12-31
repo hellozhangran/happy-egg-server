@@ -1,29 +1,6 @@
-/**
- * 通过一个日志文件来控制定时任务
- */
-const fs = require('fs');
-const path = require('path');
-const getTodayStr = require('../utils/date').getTodayStr;
-const getHMS = require('../utils/date').getHMS;
-let filePath = path.join(__dirname, '../../logs/crawler.log');
-function limit_old(cb) {
-    let log = fs.readFileSync(filePath, 'utf8');
-    // 得到第一行
-    let list = log.split('\n');
-    let date = list[0].split(' ')[0];
-    let currentDay = getTodayStr(); // 20100101
-    let hms = getHMS(); // 12:23:01
-    if (date === currentDay) {
-        list.unshift(currentDay + ' ' + hms + ' ' + 'false');
-        fs.writeFileSync(filePath, list.join('\n'), 'utf8');
-    } else {
-        list.unshift(currentDay + ' ' + hms + ' ' + 'true');
-        fs.writeFileSync(filePath, list.join('\n'), 'utf8');
-        cb && cb();
-    }
-}
 function limit (cb) {
     if (process.env.NODE_APP_INSTANCE === 0) {
+        console.log('命中：', process.env.NODE_APP_INSTANCE);
         cb && cb();
     }
 }

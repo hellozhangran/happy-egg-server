@@ -22,7 +22,7 @@ var limit = require('./limit.js');
 
 function runSchedule (cb) {
     // 坑，如果只设置hour:7，上午7点时的每分钟都会执行。
-    schedule.scheduleJob({hour: 7, minute: 0}, function () {
+    schedule.scheduleJob({hour: null, minute: 0}, function () {
         limit(function () {
             cb();
         })
