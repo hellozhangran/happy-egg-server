@@ -14,7 +14,7 @@ function create (params) {
     var standardParams = params;
     var todayStr = getTodayStr();
     standardParams.create_date = params.create_date ? params.create_date : todayStr;
-    console.log('create: ', params);
+    console.log('create: ', params.title);
     return Article.create({
         ...standardParams
     });
