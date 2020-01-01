@@ -2,7 +2,6 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const articleCtrl = require('./article');
 
-
 async function cnblogs () {
     const res = await axios.get('https://www.cnblogs.com/');
     const $ = cheerio.load(res.data);
