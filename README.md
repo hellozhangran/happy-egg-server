@@ -24,6 +24,7 @@ Node.js大概从2014年开始火热，现在搜一下学习教程，很多开源
 4. [实现一个简易爬虫&启动定时任务](https://github.com/hellozhangran/happy-egg-server/blob/master/docs/4.crawler-schedule.md)
 5. [部署项目到腾讯云服务器](https://github.com/hellozhangran/happy-egg-server/blob/master/docs/5.tcloud.md)
 6. [PM2负载均衡&Node多实例下定时任务重复的问题](https://github.com/hellozhangran/happy-egg-server/blob/master/docs/6.pm2.md)
+7. [express起静态服务&nginx配置二级域名](https://github.com/hellozhangran/happy-egg-server/blob/master/docs/7.static-web-nginx.md)
 
 ## 可能涉及内容
 
