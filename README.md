@@ -40,6 +40,12 @@ Node.js大概从2014年开始火热，现在搜一下学习教程，很多开源
 * RPC
 * JWT
 * Redis缓存
+* Express 源码分析
+* Koa 与 Express 对比
+* Egg使用以及优劣分析
+* Midway 尝试
+* 尝试搭建Serverless
+
 
 ## 进度Changelog
 
